@@ -10,13 +10,9 @@ type CellProps = CellType & {
 };
 
 class Cell extends React.Component<CellProps> {
-  constructor(props: CellProps) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-  }
-
   onClick(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
+
     if (e.ctrlKey) {
       this.props.onCtrlClick();
     } else {
@@ -41,7 +37,7 @@ class Cell extends React.Component<CellProps> {
     }
 
     return (
-      <button className={className} onClick={this.onClick}>
+      <button className={className} onClick={e => this.onClick(e)}>
         {icon}
       </button>
     );

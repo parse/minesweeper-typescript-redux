@@ -1,19 +1,12 @@
-import {
-  Game,
-  GameStatus,
- } from './../../types/index';
-
+import { Game, GameStatus } from './../../types/index';
 import * as actions from '../../redux/actions/';
-
-import {
-  minesweeper,
-} from './../../minesweeper';
+import { minesweeper } from './../../minesweeper';
 
 import {
   RESET_GAME,
   REVEAL_LOCATION,
   FLAG_LOCATION,
-  INCREMENT_TRIES
+  INCREMENT_TRIES,
 } from '../constants/index';
 
 const defaultState = minesweeper.create({
@@ -22,7 +15,7 @@ const defaultState = minesweeper.create({
   height: 1,
 });
 
-export default function boardReducer (
+export default function boardReducer(
   state: Game = defaultState,
   action: actions.GameAction
 ): Game {

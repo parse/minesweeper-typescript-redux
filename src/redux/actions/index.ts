@@ -1,4 +1,3 @@
-
 import {
   FLAG_LOCATION,
   REVEAL_LOCATION,
@@ -6,9 +5,7 @@ import {
   INCREMENT_TRIES,
 } from './../constants';
 
-import {
-  Options
-} from './../../types/';
+import { Options } from './../../types/';
 
 export interface FlagLocation {
   type: FLAG_LOCATION;
