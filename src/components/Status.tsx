@@ -3,11 +3,11 @@ import * as React from 'react';
 import { Options, GameStatus } from './../types/';
 
 type StatusProps = Options & {
-  status: GameStatus,
-  moveCount: number,
+  status: GameStatus;
+  moveCount: number;
 };
 
-const Status: React.SFC<StatusProps> = (props) => {
+const Status: React.SFC<StatusProps> = props => {
   let resolution = <span>In progress</span>;
   if (props.status === GameStatus.Won) {
     resolution = <code>Victory!</code>;
@@ -19,15 +19,19 @@ const Status: React.SFC<StatusProps> = (props) => {
     status: resolution,
     moveCount: props.moveCount,
     mineCount: props.mineCount,
-    grid: `${props.width} x ${props.height}`
+    grid: `${props.width} x ${props.height}`,
   };
 
   return (
     <table>
       {Object.keys(facts).map(key => (
         <tr>
-          <td><code>{key}</code></td>
-          <td><code>{facts[key]}</code></td>
+          <td>
+            <code>{key}</code>
+          </td>
+          <td>
+            <code>{facts[key]}</code>
+          </td>
         </tr>
       ))}
     </table>

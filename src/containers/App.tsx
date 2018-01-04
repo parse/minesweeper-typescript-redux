@@ -3,10 +3,7 @@ import * as redux from 'redux';
 import './App.css';
 import { connect } from 'react-redux';
 
-import {
-  Game,
-  StoreState,
-} from './../types/';
+import { Game, StoreState } from './../types/';
 
 import * as actions from '../redux/actions/';
 
@@ -20,13 +17,13 @@ const DEFAULT_OPTIONS = {
 };
 
 type StateProps = Game & {
-  grid: string[][]
+  grid: string[][];
 };
 
 type DispatchProps = {
-  flagLocation: typeof actions.flagLocation,
-  revealLocation: typeof actions.revealLocation,
-  resetGame: typeof actions.resetGame,
+  flagLocation: typeof actions.flagLocation;
+  revealLocation: typeof actions.revealLocation;
+  resetGame: typeof actions.resetGame;
 };
 
 type Props = StateProps & DispatchProps;
@@ -46,12 +43,7 @@ class App extends React.Component<Props> {
   }
 
   renderBoard() {
-    const {
-      grid,
-      cellsByXy,
-      revealLocation,
-      flagLocation
-    } = this.props;
+    const { grid, cellsByXy, revealLocation, flagLocation } = this.props;
 
     return (
       <div className="board">
@@ -99,11 +91,13 @@ const mapStateToProps = (state: StoreState): StateProps => {
 
   return {
     ...state.board,
-    grid
+    grid,
   };
 };
 
-const mapDispatchToProps = (dispatch: redux.Dispatch<actions.GameAction>): DispatchProps =>
+const mapDispatchToProps = (
+  dispatch: redux.Dispatch<actions.GameAction>
+): DispatchProps =>
   redux.bindActionCreators(
     {
       resetGame: actions.resetGame,

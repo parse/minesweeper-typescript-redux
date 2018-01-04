@@ -1,15 +1,12 @@
 import * as React from 'react';
 
-import {
-  Cell as CellType,
-  CellStatus
- } from './../types/index';
+import { Cell as CellType, CellStatus } from './../types/index';
 
 import './Cell.css';
 
 type CellProps = CellType & {
-  onClick(): void
-  onCtrlClick(): void
+  onClick(): void;
+  onCtrlClick(): void;
 };
 
 class Cell extends React.Component<CellProps> {
@@ -28,10 +25,7 @@ class Cell extends React.Component<CellProps> {
   }
 
   render() {
-    const {
-      status,
-      revealedCount,
-    } = this.props;
+    const { status, revealedCount } = this.props;
 
     let icon = <i>.</i>;
     let className = 'cell';
@@ -47,10 +41,7 @@ class Cell extends React.Component<CellProps> {
     }
 
     return (
-      <button
-        className={className}
-        onClick={this.onClick}
-      >
+      <button className={className} onClick={this.onClick}>
         {icon}
       </button>
     );
