@@ -1,0 +1,11 @@
+export const FLAG_LOCATION = 'FLAG_LOCATION';
+export type FLAG_LOCATION = typeof FLAG_LOCATION;
+
+export const REVEAL_LOCATION = 'REVEAL_LOCATION';
+export type REVEAL_LOCATION = typeof REVEAL_LOCATION;
+
+export const RESET_GAME = 'RESET_GAME';
+export type RESET_GAME = typeof RESET_GAME;
+
+export const INCREMENT_TRIES = 'INCREMENT_TRIES';
+export type INCREMENT_TRIES = typeof INCREMENT_TRIES;
