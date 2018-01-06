@@ -1,12 +1,13 @@
 # ts-minesweeper
 
-Based on https://github.com/rjz/ts-minesweeper.
+Based on https://github.com/rjz/ts-minesweeper, reorganised, modified and added support for two players.
 
 Minesweeper clone with TypeScript, Redux, and React
 
-<p align="center">
-  <img src="screenshot.png" alt="Screenshot of ts-minesweeper" />
-</p>
+## TODO
+
+* Support for two players
+* Use redux-saga for async logic.
 
 ## Usage
 
