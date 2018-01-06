@@ -1,5 +1,7 @@
 # ts-minesweeper
 
+Based on https://github.com/rjz/ts-minesweeper.
+
 Minesweeper clone with TypeScript, Redux, and React
 
 <p align="center">
